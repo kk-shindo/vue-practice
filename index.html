@@ -12,35 +12,44 @@
 </head>
 <body class="page-top">
     <header class="header">
-        <a href="#" class="header__logo"></a>
-        <nav class="g-nav">
-            <ul class="g-nav__list">
-                <li class="g-nav__list__item"><a href="#" class="g-nav__list__inner">text</a></li>
-                <li class="g-nav__list__item"><a href="#" class="g-nav__list__inner">text</a></li>
-                <li class="g-nav__list__item"><a href="#" class="g-nav__list__inner">text</a></li>
-            </ul>
-        </nav>
+        <div class="header__inner">
+            <a href="#" class="header__logo"></a>
+            <nav class="g-nav">
+                <ul class="g-nav__list">
+                    <li class="g-nav__list__item"><a href="#" class="g-nav__list__inner">text</a></li>
+                    <li class="g-nav__list__item"><a href="#" class="g-nav__list__inner">text</a></li>
+                    <li class="g-nav__list__item"><a href="#" class="g-nav__list__inner">text</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="main">
         <div class="mv">
-            <h1 class="hdg1">h1テキストが入ります</h1>
+            <div class="mv__txt">
+                <p class="mv__lead">リード文が入ります</p>
+                <h1 class="mv__hdg">h1テキストが入ります</h1>
+            </div>
         </div>
-        <div id="app">
-            {{ message }}
-            <ul>
-                <li v-for="job in jobs">
-                    <dt>会社名：</dt>
-                    <dd>{{ job.company }}</dd>
-                    <dt>求人名：</dt>
-                    <dd>{{ job.job_name }}</dd>
-                    <dt>年収：</dt>
-                    <dd>{{ job.income }}</dd>
-                    <dt>勤務地：</dt>
-                    <dd>{{ job.location }}</dd>
-                </li>
-                <!-- {{ $data }} -->
-            </ul>
-        </div>
+        <section id="app" class="job-area">
+            <h2 class="hdg1">h2テキストが入ります</h2>
+            <article class="job" v-for="job in jobs">
+                <div class="job__detail">
+                    <dl class="job__list">
+                        <dt class="job__list__term">会社名：</dt>
+                        <dd class="job__list__desc">{{ job.company }}</dd>
+                        <dt class="job__list__term">求人名：</dt>
+                        <dd class="job__list__desc">{{ job.job_name }}</dd>
+                        <dt class="job__list__term">年収：</dt>
+                        <dd class="job__list__desc">{{ job.income }}</dd>
+                        <dt class="job__list__term">勤務地：</dt>
+                        <dd class="job__list__desc">{{ job.location }}</dd>
+                    </dl>
+                </div>
+                <div class="job__img">
+                    <img v-bind:src="job.image" alt="">
+                </div>
+            </article>
+        </section>
     </main>
     <footer class="footer">
         <nav class="sub-nav">

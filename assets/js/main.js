@@ -5,10 +5,32 @@ const app = new Vue({
         json: './assets/json/job.json',
         jobs: [
             {
-                company: "テスト会社",
-                job_name: "テストお仕事",
-                income: "年収100万円",
-                location: "勤務地テスト"
+                company: 'テスト会社',
+                job_name: 'テストお仕事',
+                income: '年収100万円',
+                location: '勤務地テスト',
+                image: './assets/img/img01.jpg'
+            },
+            {
+                company: 'テスト会社',
+                job_name: 'テストお仕事',
+                income: '年収100万円',
+                location: '勤務地テスト',
+                image: './assets/img/img01.jpg'
+            },
+            {
+                company: 'テスト会社',
+                job_name: 'テストお仕事',
+                income: '年収100万円',
+                location: '勤務地テスト',
+                image: './assets/img/img01.jpg'
+            },
+            {
+                company: 'テスト会社',
+                job_name: 'テストお仕事',
+                income: '年収100万円',
+                location: '勤務地テスト',
+                image: './assets/img/img01.jpg'
             }
         ]
     },

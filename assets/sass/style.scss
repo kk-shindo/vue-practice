@@ -1,13 +1,28 @@
 /* common */
+html {
+    font-size: 62.5%;
+}
+
 body {
     padding-top: 50px;
     color: #333;
     background-color: #FFF;
+    font-size: 1.4rem;
+    line-height: 1.5;
 }
 
 a {
     text-decoration: none;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* base */
+@import "base/_vars";
+@import "base/_mixin";
 
 /* layout */
 @import "layout/_header";
@@ -15,8 +30,10 @@ a {
 @import "layout/_layout";
 
 /* components */
+@import "components/_hdg";
+@import "components/_mv";
 @import "components/_nav";
+@import "components/_job";
 
 /* project */
-.page-top {
-}
+@import "project/_top";
