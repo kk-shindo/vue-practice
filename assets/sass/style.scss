@@ -1,0 +1,22 @@
+/* common */
+body {
+    padding-top: 50px;
+    color: #333;
+    background-color: #FFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* layout */
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_layout";
+
+/* components */
+@import "components/_nav";
+
+/* project */
+.page-top {
+}

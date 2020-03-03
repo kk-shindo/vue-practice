@@ -1,0 +1,38 @@
+/* component */
+.g-nav {
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+
+        &__item {
+        }
+
+        &__inner {
+            padding: 0 15px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+    }
+}
+
+.sub-nav {
+    &__list {
+        display: flex;
+        justify-content: center;
+
+        &__item {
+        }
+
+        &__inner {
+            padding: 0 15px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+    }
+}

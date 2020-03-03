@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/main.js" defer></script>
+</head>
+<body class="page-top">
+    <header class="header">
+        <a href="#" class="header__logo"></a>
+        <nav class="g-nav">
+            <ul class="g-nav__list">
+                <li class="g-nav__list__item"><a href="#" class="g-nav__list__inner">text</a></li>
+                <li class="g-nav__list__item"><a href="#" class="g-nav__list__inner">text</a></li>
+                <li class="g-nav__list__item"><a href="#" class="g-nav__list__inner">text</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="mv">
+            <h1 class="hdg1">h1テキストが入ります</h1>
+        </div>
+        <div id="app">
+            {{ message }}
+            <ul>
+                <li v-for="job in jobs">
+                    <dt>会社名：</dt>
+                    <dd>{{ job.company }}</dd>
+                    <dt>求人名：</dt>
+                    <dd>{{ job.job_name }}</dd>
+                    <dt>年収：</dt>
+                    <dd>{{ job.income }}</dd>
+                    <dt>勤務地：</dt>
+                    <dd>{{ job.location }}</dd>
+                </li>
+                <!-- {{ $data }} -->
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <nav class="sub-nav">
+            <ul class="sub-nav__list">
+                <li class="sub-nav__list__item"><a href="#" class="sub-nav__list__inner">text</a></li>
+                <li class="sub-nav__list__item"><a href="#" class="sub-nav__list__inner">text</a></li>
+                <li class="sub-nav__list__item"><a href="#" class="sub-nav__list__inner">text</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
