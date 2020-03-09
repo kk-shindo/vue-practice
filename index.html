@@ -34,18 +34,12 @@
             <h2 class="hdg1">h2テキストが入ります</h2>
             <article class="job" v-for="job in jobs">
                 <div class="job__detail">
-                    <dl class="job__list">
-                        <dt class="job__list__term">会社名：</dt>
-                        <dd class="job__list__desc">{{ job.company }}</dd>
-                        <dt class="job__list__term">求人名：</dt>
-                        <dd class="job__list__desc">{{ job.job_name }}</dd>
-                        <dt class="job__list__term">年収：</dt>
-                        <dd class="job__list__desc">{{ job.income }}</dd>
-                        <dt class="job__list__term">勤務地：</dt>
-                        <dd class="job__list__desc">{{ job.location }}</dd>
+                    <dl class="job__list" v-for="(value, key) in keys">
+                        <dt class="job__list__term">{{ value }}：</dt>
+                        <dd class="job__list__desc">{{ job[key] }}</dd>
                     </dl>
                 </div>
-                <div class="job__img">
+                <div class="job__img" v-if="job.image">
                     <img v-bind:src="job.image" alt="">
                 </div>
             </article>

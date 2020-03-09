@@ -1,6 +1,16 @@
-{
-	"company": "テスト会社",
-	"job_name": "テストお仕事",
-	"income": "年収100万円",
-	"location": "勤務地テスト"
-}
+[
+	{
+		"company": "テスト会社",
+		"job_name": "テストお仕事",
+		"income": "年収100万円",
+		"location": "勤務地テスト",
+		"image": "./assets/img/img01.jpg"
+	},
+	{
+		"company": "テストテスト",
+		"job_name": "テストテスト",
+		"income": "年収200万円",
+		"location": "勤務地勤務地",
+		"image": "./assets/img/img01.jpg"
+	}
+]

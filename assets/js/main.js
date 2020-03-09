@@ -3,51 +3,26 @@ const app = new Vue({
     data: {
         message: 'hello world',
         json: './assets/json/job.json',
-        jobs: [
-            {
-                company: 'テスト会社',
-                job_name: 'テストお仕事',
-                income: '年収100万円',
-                location: '勤務地テスト',
-                image: './assets/img/img01.jpg'
-            },
-            {
-                company: 'テスト会社',
-                job_name: 'テストお仕事',
-                income: '年収100万円',
-                location: '勤務地テスト',
-                image: './assets/img/img01.jpg'
-            },
-            {
-                company: 'テスト会社',
-                job_name: 'テストお仕事',
-                income: '年収100万円',
-                location: '勤務地テスト',
-                image: './assets/img/img01.jpg'
-            },
-            {
-                company: 'テスト会社',
-                job_name: 'テストお仕事',
-                income: '年収100万円',
-                location: '勤務地テスト',
-                image: './assets/img/img01.jpg'
-            }
-        ]
+        keys: {
+            "company": "会社名",
+            "job_name": "求人名",
+            "income": "年収",
+            "location": "勤務地"
+        },
+        jobs: []
     },
     methods: {
         getJobs: function () {
-            console.log(this.json)
             axios.get(this.json)
                 .then(function (response) {
-                    console.log()
-                    this.jobs = response;
-                })
+                    this.jobs = response.data;
+                }.bind(this))
                 .catch(function (error) {
                     console.error(error)
-                })
+                }.bind(this))
         }
     },
     mounted() {
-        // this.getJobs()
+        this.getJobs()
     }
 })
